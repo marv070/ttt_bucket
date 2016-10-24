@@ -184,7 +184,7 @@ AWS::S3::Base.establish_connection!(
 file = "summary.csv" 
 bucket = 'tttresults' 
 csv = AWS::S3::S3Object.value(file, bucket)
-csv << "joe"
+csv << "will this print a new line?" + "\n"
 
 # csv[1][2] = 'YIKES!'
 # new_csv = "what the hell"
