@@ -1,0 +1,11 @@
+<tr>
+    <th>Name</th>
+    <th>Number</th>
+  </tr><br>
+
+  <% @names.each do |row| %>
+  <tr>
+    <td> <%= row[0] %> </td>
+    <td> <%= row[2] %> </td><br>
+  <tr>
+  <% end %>
