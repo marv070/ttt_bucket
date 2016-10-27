@@ -19,8 +19,8 @@ require 'csv'
 
 def send_data_to_s3_bucket
 	AWS::S3::Base.establish_connection!(
-  	:access_key_id => 'AKIAIJ4W3TYBV2XQRKPA',
- 	 :secret_access_key => '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'  
+  	:access_key_id => ENV['S3_KEY'],
+ 	 :secret_access_key => ENV['S3_SECRET']  
 	)
 	file = "summary.csv" 
 	bucket = 'tttresults'

@@ -68,10 +68,10 @@ post '/opponent' do
 
 		redirect '/get_move'
 
-	# else player_2 == "unbeatable_ai"
-	# 	session[:p2] = UnbeatableAI.new("O")
+	else player_2 == "unbeatable_ai"
+		session[:p2] = UnbeatableAI.new("O")
 
-	# 	redirect '/get_move'
+		redirect '/get_move'
 	end
 end
 
@@ -197,14 +197,7 @@ def read_csv_from_s3
 	file = 'summary.csv'
 	bucket = ENV['S3_BUCKET']
 	object_from_s3 = AWS::S3::S3Object.value(file, bucket)
-	# csv = CSV.parse(object_from_s3)
-	# file = File.open('summary.csv', "r")
-	# contents = file.read
-	#  name_of_output_file = "summary2.csv"
-	#  write_to_file = File.open(name_of_output_file, "w")
-	#  write_to_file.puts contents
-	#  write_to_file.close
-	# contents
+	
 end	
 
 def create_result_array(content)
